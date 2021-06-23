@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500&display=swap');
+
+:root {
+	--dark-color-a: #6b6d7a;
+	--dark-color-b: #a3a5b8;
+	--light-color: #f7b5ec;
+	--success-color: #5cb85c;
+	--error-color: #d9534f;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Baloo Tammudu 2', 'Trebuchet';
+	font-size: 16px;
+
+	background-image:url('fond.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin: 20px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: var(--light-color);
+	color: var(--dark-color-a);
+	border: 0;
+	font-size: 17px;
+	margin-left: 5px;
+}
+
+/*  LOGO */
+#logoTG {
+	width: 96px;
+    position: absolute;
+    left: 92px;
+    top: 21px;
+    rotate: 23deg;
+}
+#logoTD {
+	width: 96px;
+	position: absolute;
+	top: 22px;
+	rotate: -21deg;
+	right: 79px;
+	transform: scaleX(-1);
+}
+
+
+/* Accueil */
+
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	background: var(--dark-color-a);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color: white;
+}
+
+.chat-form-container {
+	padding: 20px 30px;
+	background-color: var(--dark-color-a);
+	position: absolute;
+	bottom:15px;
+	width: 95%;
+
+}
+
+.chat-form-container form {
+	display: flex;
+	justify-content: center;
+	height: 30px;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	flex: 1;
+	border-radius: 5px;
+}
+/*   ///////////////////////   */
+.rad {
+	border-radius: 5px;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+	flex-direction: row;
+	overflow: auto;
+	margin-top: 0;
+
+}
+
+.msgContainer{
+    width:75%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+	color: rgb(8, 5, 8);
+	
+}
+
+.newUser {
+	background-color: rgba(230, 230, 230, 0.2);
+	border-radius: 9px;
+	padding: 5px;
+	margin: 2% auto 3% 38%;
+}
+.quitUser {
+	background-color: rgba(32, 17, 17, 0.2);
+	border-radius: 9px;
+	padding: 5px;
+	margin: 2% auto 3% 38%;
+}
+
+.newMessageMe{
+    background-color: rgb(138, 158, 182);
+	margin: 2% 15% 2% 71%;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgb(50, 52, 53);
+	width: 60%;
+}
+.newMessageAll {
+    background-color: rgb(227, 157, 248);
+	margin: 2% 0% 2% 38%;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgb(50, 52, 53);
+	width: 60%;
+}
+
+.oldMessages{
+	background-color:rgb(159, 134, 160);
+	margin: 2% 0% 2% 38%;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgb(50, 52, 53);
+	width: 60%;
+}
+.whisper{
+    background-color: rgba(79, 22, 126, 0.459);
+    margin: 2% 0% 2% 38%;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgb(50, 52, 53);
+	width: 60%;
+}
+.oldWhispers{
+	background-color: rgba(141, 37, 110, 0.527);
+	margin: 2% 0% 2% 38%;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgb(50, 52, 53);
+	width: 60%;
+}
+
+
+.channelList{
+	width:25%;
+	height:80%;
+	color: white;
+	position:absolute;
+	background-color: var(--dark-color-a);
+	padding-left: 5px;
+	box-shadow: 5px 5px 5px rgb(50, 52, 53);
+
+}
+#btnSend {
+	color:black;
+}
+button {
+	background-color: transparent;
+	border: none;
+}
+#emojiInput {
+	color: var(--light-color);
+	font-size:30px;
+	cursor: pointer;
+	margin-left: 6px;
+	margin-right:3px;
+}
+
+#hour {
+	color: rgb(63, 62, 62);
+	font-style: italic;
+}
+
+.titleChan {
+	color:rgb(221, 140, 221);
+	text-align: center;
+	margin-top: 10px;
+}
+
+.elementList {
+	width: 100%;
+    padding: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+	text-align: justify;
+}
+.elementList:hover, .inChannel {
+    background-color: rgba(156, 145, 156, 0.555);
+    transition: 0.5s;
+    cursor: pointer;
+	padding-left:50px;
+}
+#newChanBtn {
+	padding:0;
+	padding-top: 5px;
+	background-color: #8e6cdd8f;
+	border-radius: 5px;
+	position:absolute;
+	bottom:40px;
+	width:90%;
+	margin-left:3px;
+	text-align: center;
+	font-size: 16px;
+}
+#newChanBtn:hover {
+	color:rgba(0, 0, 0, 0.459);
+}
+
+@media screen and (min-width:1000px) {
+	.channelList{
+		width:15%;
+	}
+	#newChanBtn {
+		width:90%;
+		margin-left:9px;
+	}
+	.newMessageAll, .oldMessages, .oldWhispers, .whisper, .quitUser, .newUser {
+		margin: 2% 0% 2% 23%;
+	}
+}
+@media screen and (max-width:700px) {
+	img {
+		display: none;
+	}
+	#newChanBtn {
+		font-size:12px;
+	}
+}

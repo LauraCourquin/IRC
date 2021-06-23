@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="style.css" type="text/css">
+
+
+		<title>Truit'RC App</title>
+		
+	</head>
+
+    <body>
+
+		<div>
+			<header class="join-header">
+
+				<p>
+				<img src="Autocollant.png" alt="logo Truite" id="logoTG">
+				<h1>Bienvenue sur Truit'RC !</h1>
+				<img src="Autocollant.png" alt="logo Truite" id="logoTD">
+				</p>
+
+			</header>
+		</div>
+
+
+		<div class="channelList">
+			<h2 class="titleChan">CHANNELS</h2>
+
+				<ul id="roomList">
+
+						<% channels.forEach(channel => { %>
+
+							<li class="elementList" 
+							id="<%= channel.name %>" 
+							onclick="_joinRoom('<%= channel.name %>')"> 
+
+								<%= channel.name %>
+
+							</li>
+
+						<% }); %>
+						<li onclick="_createChannel()" class="elementList" id="newChanBtn"><i class="fas fa-plus-circle"></i> CHAN</li>
+				</ul>
+		</div>
+
+
+		<div class="container">
+			<div class="msgContainer" id="msgContainer">
+				
+				<!-- Personne connectée/deconnectée -->
+				<!-- Message -->
+			</div>
+			
+		</div>
+
+		<div class="chat-form-container rad">
+
+			<p id="isWritting"></p>
+			<form method="POST" id="chatForm">
+				<input type="text" id="msgInput" autofocus onkeypress="writting()" onblur="notWritting()">
+				
+				<select name="receiver" id="receiverInput" class='btn rad'>
+                    <option value="all">A tous</option>
+                    <% users.forEach(user => { %>
+                        <option value="<%= user.pseudo %>"><%= user.pseudo %></option>
+                    <% }); %>
+                </select>
+
+				<button type="button" id="emojiInput"><i class="fas fa-smile-beam"></i></button>
+
+				<input type="submit" id="btnSend" value="Envoyer" class="btn rad">
+				
+			</form>
+
+		</div>
+
+    </body>
+	<script src="https://cdn.jsdelivr.net/npm/emoji-button@latest/dist/index.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="chat.js"></script>
+</html>
